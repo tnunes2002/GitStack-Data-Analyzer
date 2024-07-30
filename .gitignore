@@ -1,0 +1,61 @@
+# Node.js specific
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Logs
+logs
+*.log
+logs/*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+
+# Node-wrapped and native binaries
+node_modules/
+*.node
+
+# Coverage directory used by testing frameworks like jest
+coverage/
+
+# Build output directories
+build/
+dist/
+
+# Temporary files
+tmp/
+temp/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Optional REPL history
+.node_repl_history
+
+# macOS specific
+.AppleDouble
+.LSOverride
+._*
+
+# Windows specific
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.lnk
+*.stackdump
+*.tmp
+*.temp
+*.obj
