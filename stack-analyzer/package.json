@@ -1,0 +1,13 @@
+{
+    "name": "stack-analyzer",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "axios": "^0.21.1"
+    }
+  }
+  
