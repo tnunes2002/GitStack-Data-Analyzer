@@ -16,22 +16,38 @@ repos.data.forEach(async repo => {
 
     console.log(owner + " " + repoName)
 
-    const data = await octokit.request("GET /repos/{owner}/{repo}/commits", {
+    const commits = await octokit.request("GET /repos/{owner}/{repo}/commits", {
+        owner: owner,
+        repo: repoName
+    })
+
+    const pullRequests =  await octokit.request("GET /repos/{owner}/{repo}/pulls", {
+        owner: owner,
+        repo: repoName
+    })
+
+    const issues =  await octokit.request("GET /repos/{owner}/{repo}/issues", {
         owner: owner,
         repo: repoName
     })
     
-    writeCommitsToFile(data.data, "commits.txt");
-    data.data.forEach(element => {
-        console.log("message: " + element.commit.message);
-        count++;
-    });
-
-    console.log(count);
+    writeCommitsToFile(commits.data, "commits.txt");
+    writeIssuesToFile(issues.data, "issues.txt");
+    writePullRequestsToFile(pullRequests.data, "pullRequets.txt");
 });
 
-// Funzione per scrivere i commit su un file
+// Funzione per scrivere su file
 function writeCommitsToFile(commits, filePath) {
     const commitMessages = commits.map(commit => commit.commit.message  + " " + commit.commit.author).join('\n');
     fs.appendFileSync(filePath, commitMessages, 'utf8');
+}
+
+function writeIssuesToFile(issues, filePath) {
+    const issuesMessage = issues.map(issue => issue.body  + " " + issue.user.login).join('\n');
+    fs.appendFileSync(filePath, issuesMessage, 'utf8');
+}
+
+function writePullRequestsToFile(pullRequests, filePath) {
+    const pullRequestsMessage = pullRequests.map(pullRequest => pullRequest.body  + " " + pullRequest.user.login).join('\n');
+    fs.appendFileSync(filePath, pullRequestsMessage, 'utf8');
 }
