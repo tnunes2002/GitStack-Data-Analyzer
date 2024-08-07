@@ -1,4 +1,4 @@
-import { searchPublicRepos } from "./services/githubService.js"
+import searchPublicRepos from "./services/githubService.js"
 
 
 const repos = await searchPublicRepos(0);

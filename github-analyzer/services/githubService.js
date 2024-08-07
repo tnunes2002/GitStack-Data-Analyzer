@@ -1,10 +1,10 @@
 import { Octokit, App } from "octokit";
-const octokitConfigs = require('../configs/config.js');
+import octokitConfigs from '../configs/config.js'
 
 const octokit = new Octokit(octokitConfigs);
 
 
-async function searchPublicRepos(since){
+export default async function searchPublicRepos(since){
     try{
         const repos = await octokit.request("GET /repositories",
             {
@@ -18,5 +18,3 @@ async function searchPublicRepos(since){
         return [];
     }
 }
-
-module.exports = searchPublicRepos;
