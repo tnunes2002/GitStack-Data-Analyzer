@@ -1,7 +1,13 @@
 import 'dotenv/config';
 
-const octokitConfigs = { 
+export const octokitConfigs = { 
     auth: process.env.GITHUB_API_AUTHKEY,
 }
 
-export default octokitConfigs;
+export const commitsApiParams = (owner, repoName) => {
+    return {
+        owner: owner,
+        repo: repoName,
+        per_page: 100,
+    }
+}

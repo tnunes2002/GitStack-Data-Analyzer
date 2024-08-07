@@ -1,9 +1,32 @@
-import searchPublicRepos from "./services/githubService.js"
+import { searchPublicRepos, getRepoCommits, genericRequest } from "./services/githubService.js"
+import { commitsApiParams } from "./configs/config.js"
+import constants from "./configs/constants.js"
+import { getPaginatedData } from "./utils/paginationHandler.js"
 
 
-const repos = await searchPublicRepos(0);
-console.log(repos);
-console.log(repos.data.length);
+/*const repos = await searchPublicRepos(0);
+repos.data.forEach(repo => {
+    if(repo.id===322){
+        console.log(repo.owner)
+    }
+})
+console.log(repos.data.length);*/
+
+const commits = await getPaginatedData(constants.API_BASEURL_COMMITS, commitsApiParams("sevenwire", "forgery"))
+console.log(commits)
+console.log(commits.length)
+/*
+    primo:
+    link: '<https://api.github.com/repositories/322/commits?per_page=100&page=2>; rel="next", <https://api.github.com/repositories/322/commits?per_page=100&page=3>; rel="last"',
+    'referrer-policy': 'origin-when-cross-origin, strict-origin-when-cross-origin',
+
+    ultimo:
+    link: '<https://api.github.com/repositories/322/commits?per_page=100&page=1>; rel="first", <https://api.github.com/repositories/322/commits?per_page=100&page=2>; rel="prev"',
+    'referrer-policy': 'origin-when-cross-origin, strict-origin-when-cross-origin',
+
+*/
+
+
 /*
 var count = 0;
 repos.data.forEach(async repo => {
