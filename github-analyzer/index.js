@@ -10,6 +10,7 @@ repos.data.forEach(repo => {
         console.log(repo.owner)
     }
 })
+
 console.log(repos.data.length);*/
 
 const commits = await getPaginatedData(constants.API_BASEURL_COMMITS, commitsApiParams("tnunes2002", "GitStack-Data-Analyzer"));
