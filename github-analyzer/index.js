@@ -2,7 +2,6 @@ import { searchPublicRepos, getRepoCommits, genericRequest } from "./services/gi
 import { commitsApiParams, publicReposApiParams } from "./configs/config.js"
 import constants from "./configs/constants.js"
 import { getPaginatedData, getPublicReposPaginatedData } from "./utils/paginationHandler.js"
-import { closeConnection, writeToCollection } from "./repositories/mongodbRepository.js"
 
 
 /*const repos = await searchPublicRepos(0);
@@ -13,7 +12,13 @@ repos.data.forEach(repo => {
 })
 console.log(repos.data.length);*/
 
-console.log(await getPublicReposPaginatedData(constants.API_BASEURL_PUBLICREPOS, publicReposApiParams(0)));
+const commits = await getPaginatedData(constants.API_BASEURL_COMMITS, commitsApiParams("tnunes2002", "GitStack-Data-Analyzer"));
+
+commits.result.forEach(commit => {
+    console.log(commit.commit);
+    console.log(commit.author);
+    console.log(commit.committer)
+})
 
 /*const repos = await getPublicReposPaginatedData(constants.API_BASEURL_PUBLICREPOS, publicReposApiParams(3869359));
 console.log(repos);*/

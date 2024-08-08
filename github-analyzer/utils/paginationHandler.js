@@ -18,7 +18,7 @@ export async function getPaginatedData(url, params) {
       }
     } while (response);
     return {
-      pages: pages,
+      pages: pages + 1,
       result: results
     };
   }
@@ -35,6 +35,6 @@ export async function getPublicReposPaginatedData(url, params){
 
   return {
     nextPage: nextPage,
-    result: response
+    result: response.data
   };
 }
