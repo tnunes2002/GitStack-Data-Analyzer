@@ -8,6 +8,7 @@ export async function genericRequest(url, params){
         const response = await octokit.request(url, params);
         return response;
     } catch (error) {
+        console.error(error);
         console.error(`Errore ${error.status}: ${error.message}`);
         return [];
     }
