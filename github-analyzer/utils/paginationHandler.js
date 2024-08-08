@@ -38,3 +38,19 @@ export async function getPublicReposPaginatedData(url, params){
     result: response.data
   };
 }
+
+export async function getSinglePageDataSearch(url, params){
+  let response;
+  let nextDate = -1;
+
+  response = await genericRequest(url, params);
+
+  if (response.headers.link && response.headers.link.includes('rel="next"')) {
+    nextDate = response.data.items.at(-1).commit.author.date;
+  } 
+
+  return {
+    nextDate: nextDate,
+    result: response
+  };
+}

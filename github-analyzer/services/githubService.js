@@ -24,7 +24,8 @@ export async function searchPublicRepos(since){
 
         return repos;
     }catch(error){
-
+        console.error(error)
+        return [];
     }
 }
 
@@ -71,3 +72,21 @@ export async function getRepoPullRequests(owner, repoName){
         return [];
     }
 }
+
+export async function searchCommitsWithKeyword(owner, repo, keyword) {
+    try {
+      const query = `${keyword}`;
+      const response = await octokit.request('GET /search/commits', {
+        q: query,
+        per_page: 100,
+        sort: 'author-date',  // Ordinare per data dell'autore
+        order: 'asc'         // Ordinamento crescente
+      });
+  
+      const commits = response.data;
+      return commits;
+  
+    } catch (error) {
+      console.error("Errore durante la ricerca delle commit:", error);
+    }
+  }

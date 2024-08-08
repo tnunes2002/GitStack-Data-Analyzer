@@ -34,3 +34,12 @@ export const pullRequestsApiParams = (owner, repoName) => {
         per_page: constants.API_PERPAGE_ELEMENTS,
     }
 }
+
+export const searchApiParams = (keyword, startDate, finishDate) => {
+    return {
+        q: `${keyword} author-date:${startDate}..${finishDate}`,
+        per_page: constants.API_PERPAGE_ELEMENTS,
+        sort: 'author-date',  // Ordinare per data dell'autore
+        order: 'asc'  // Ordinamento crescente
+    }
+  };
