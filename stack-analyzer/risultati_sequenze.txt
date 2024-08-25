@@ -1,0 +1,71 @@
+Sequenze di 2 parole che contengono 'chatgpt' e compaiono più di 14 volte:
+chatgpt but: 208
+chatgpt and: 194
+asked chatgpt: 163
+chatgpt to: 105
+chatgpt api: 99
+and chatgpt: 97
+from chatgpt: 96
+with chatgpt: 91
+to chatgpt: 90
+the chatgpt: 86
+using chatgpt: 86
+asking chatgpt: 75
+chatgpt i: 66
+chatgpt for: 64
+tried chatgpt: 60
+by chatgpt: 59
+of chatgpt: 52
+chatgpt is: 49
+even chatgpt: 40
+chatgpt it: 39
+ask chatgpt: 38
+chatgpt with: 37
+use chatgpt: 30
+for chatgpt: 26
+chatgpt suggested: 24
+that chatgpt: 24
+in chatgpt: 23
+chatgpt in: 22
+used chatgpt: 22
+a chatgpt: 20
+on chatgpt: 20
+chatgpt which: 20
+chatgpt says: 19
+chatgpt gave: 18
+chatgpt has: 18
+like chatgpt: 17
+chatgpt about: 16
+what chatgpt: 16
+chatgpt response: 15
+as chatgpt: 15
+chatgpt as: 15
+
+Sequenze di 3 parole che contengono 'chatgpt' e compaiono più di 14 volte:
+i asked chatgpt: 70
+chatgpt but it: 49
+chatgpt and it: 38
+asked chatgpt but: 37
+tried asking chatgpt: 37
+the chatgpt api: 33
+chatgpt but i: 33
+asked chatgpt and: 30
+tried using chatgpt: 29
+using chatgpt but: 24
+even asked chatgpt: 22
+to use chatgpt: 21
+tried chatgpt but: 21
+asked chatgpt for: 20
+i tried chatgpt: 20
+to ask chatgpt: 19
+chatgpt for help: 19
+chatgpt with dan: 19
+help of chatgpt: 18
+help from chatgpt: 18
+tried chatgpt and: 17
+asking chatgpt but: 17
+to chatgpt and: 16
+and chatgpt but: 16
+chatgpt i have: 16
+using chatgpt to: 16
+chatgpt but the: 16
