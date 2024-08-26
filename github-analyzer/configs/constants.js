@@ -12,7 +12,9 @@ const constants = {
     MONGODB_DATABASE_NAME: "githubAnalyzer",
     MONGODB_REPOS_COLLECTION_NAME: "repos",
     MONGODB_COMMITS_COLLECTION_NAME: "commits",
-    MONGODB_ISSUES_PULLREQUESTS_COLLECTION_NAME: "issues_pullrequests"
+    MONGODB_ISSUES_PULLREQUESTS_COLLECTION_NAME: "issues_pullrequests",
+
+    NGRAM_FILEPATH: "ngrams.txt"
 }
 
 export default constants;

@@ -39,3 +39,12 @@ export function getDateFromRequest(url, request){
             return request.created_at;
     }
 }
+
+export function getTextFromCollectionName(doc, collectionName){
+    switch(collectionName){
+        case constants.MONGODB_COMMITS_COLLECTION_NAME:
+            return doc.commit.message;
+        case constants.MONGODB_ISSUES_PULLREQUESTS_COLLECTION_NAME:
+            return doc.title + " " + doc.body
+    }
+}

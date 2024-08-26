@@ -26,3 +26,9 @@ export async function closeConnection(){
 
     console.log("database connection closed...")
 }
+
+export async function getCollection(collectionName){
+    const collection = db.collection(collectionName);
+    
+    return collection.find({});
+}
