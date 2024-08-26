@@ -14,6 +14,8 @@ export async function genericRequest(url, params){
     }
 }
 
+/* Reference calls */
+
 export async function searchPublicRepos(since){
     try{
         const repos = await octokit.request("GET /repositories",
@@ -90,3 +92,5 @@ export async function searchCommitsWithKeyword(owner, repo, keyword) {
       console.error("Errore durante la ricerca delle commit:", error);
     }
   }
+
+/* End of Reference calls */

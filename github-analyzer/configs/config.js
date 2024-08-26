@@ -42,4 +42,23 @@ export const searchApiParams = (keyword, startDate, finishDate) => {
         sort: 'author-date',  // Ordinare per data dell'autore
         order: 'asc'  // Ordinamento crescente
     }
-  };
+};
+
+export const searchApiParamsPage = (keyword, page) => {
+    return {
+        q: `${keyword}`,
+        per_page: 100,
+        page: page,
+        sort: 'author-date',
+        order: 'desc'
+      }
+}
+
+export const searchApiParamsIssues = (keyword, startDate) => {
+    return {
+        q: `${keyword} in:title,body created:>=${startDate}`,
+        per_page: 100,
+        sort: 'created',
+        order: 'asc'
+    }
+}
