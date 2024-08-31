@@ -1,5 +1,5 @@
 import natural from "natural"
-import { getCollection } from "../repositories/mongodbRepository.js";
+import { getCollection, writeToCollection } from "../repositories/mongodbRepository.js";
 import { getTextFromCollectionName } from "./utils.js";
 import { writeNgramToFile } from "./fileManager.js";
 import constants from "../configs/constants.js";
@@ -42,4 +42,20 @@ export async function generateNGramsFromCollection(frequencies, collectionNames,
     })
 
     writeNgramToFile(nGramToWrite, constants.NGRAM_FILEPATH)
+}
+
+export async function joinWordsWithDatabase(words, collectionNames){
+    var cont = 0;
+    for await (const collectionName of collectionNames){
+        const cursor = await getCollection(collectionName);
+        for await (const doc of cursor){
+            let text = getTextFromCollectionName(doc, collectionName).toLowerCase();
+            if(words.some(keyword => text.includes(keyword))){
+                writeToCollection(constants.MONGODB_NGRAM_ELEMENTS, [doc])
+                cont++;
+            }
+        }
+    };
+
+    console.log("final cont: " + cont);
 }

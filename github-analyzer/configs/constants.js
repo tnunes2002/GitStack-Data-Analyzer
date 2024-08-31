@@ -14,7 +14,8 @@ const constants = {
     MONGODB_COMMITS_COLLECTION_NAME: "commits",
     MONGODB_ISSUES_PULLREQUESTS_COLLECTION_NAME: "issues_pullrequests",
 
-    NGRAM_FILEPATH: "ngrams.txt"
+    NGRAM_FILEPATH: "ngrams.txt",
+    MONGODB_NGRAM_ELEMENTS: "ngram"
 }
 
 export default constants;
