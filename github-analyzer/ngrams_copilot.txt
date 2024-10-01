@@ -1,0 +1,91 @@
+for copilot: 12439
+aws copilot: 2726
+v with copilot: 4076
+v and copilot: 2768
+a copilot: 1254
+the copilot: 16191
+add copilot: 11301
+to copilot: 2828
+remove copilot: 2106
+copilot: 52489
+v fix copilot: 2775
+v from copilot: 1263
+update copilot: 5016
+0 copilot: 4456
+v feat copilot: 1292
+of copilot: 1866
+request copilot: 1042
+in copilot: 1963
+changes copilot: 3975
+added copilot: 2331
+com copilot: 5796
+v use copilot: 1382
+v by copilot: 58793
+copilot copilot: 1419
+v that copilot: 1699
+v using copilot: 1594
+github copilot: 47891
+https copilot: 5892
+vscode copilot: 2223
+do copilot: 1251
+v code copilot: 6500
+ai copilot: 1676
+gh copilot: 1356
+enable copilot: 1542
+disable copilot: 1734
+v how copilot: 7041
+v what copilot: 7743
+first copilot: 2358
+line copilot: 1996
+1 copilot: 1148
+microsoft copilot: 2926
+pr copilot: 1694
+description copilot: 5208
+walkthrough copilot: 8800
+summary copilot: 15039
+chat copilot: 2500
+below copilot: 1043
+engines copilot: 1128
+placeholder copilot: 2629
+aws copilot cli: 1642
+v for copilot to: 7421
+github copilot to: 2367
+github copilot for: 10809
+github copilot 1: 1335
+github copilot terms: 1395
+github copilot so: 2721
+github copilot xml: 1870
+github copilot vim: 1065
+v copilot first: 14620
+github copilot chat: 2563
+description copilot summary: 4712
+changes copilot walkthrough: 3030
+v by copilot at: 54887
+the copilot for: 2456
+summary copilot summary: 11652
+walkthrough copilot walkthrough: 8501
+first copilot all: 2247
+do copilot summary: 1045
+what copilot summary: 7621
+summary copilot poem: 1773
+how copilot walkthrough: 6975
+copilot second: 11708
+copilot third: 13297
+vscode copilot release: 1028
+v the copilot summary: 1331
+com copilot for: 5123
+the copilot workspace: 4403
+https copilot workspace: 4399
+that copilot will: 1302
+v by copilot autofix: 1425
+0 copilot git: 1670
+https copilot proxy: 1306
+engines copilot codex: 1125
+v code copilot code: 3966
+placeholder copilot summary: 1266
+the copilot walkthrough: 1380
+placeholder copilot walkthrough: 1362
+below copilot all: 1027
+the copilot all: 1298
+line copilot all: 1218
+0 copilot chat: 2320

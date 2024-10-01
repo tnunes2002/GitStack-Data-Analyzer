@@ -31,6 +31,10 @@ export async function searchPublicRepos(since){
     }
 }
 
+export async function getRepository(owner, repoName){
+
+}
+
 export async function getRepoCommits(owner, repoName){
     try{
         const commits = await octokit.request("GET /repos/{owner}/{repo}/commits", {
@@ -91,6 +95,6 @@ export async function searchCommitsWithKeyword(owner, repo, keyword) {
     } catch (error) {
       console.error("Errore durante la ricerca delle commit:", error);
     }
-  }
+}
 
 /* End of Reference calls */

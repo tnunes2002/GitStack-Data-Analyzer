@@ -7,7 +7,7 @@ export function getCurrentDate(){
 
 export function formatDate(dateToFormat){
     let date = new Date(dateToFormat);
-    date.setSeconds(date.getSeconds() + 1);
+    date.setSeconds(date.getSeconds() + 1); //TODO: RIMODIFICARE
     return date.toISOString();
 }
 
@@ -46,5 +46,18 @@ export function getTextFromCollectionName(doc, collectionName){
             return doc.commit.message;
         case constants.MONGODB_ISSUES_PULLREQUESTS_COLLECTION_NAME:
             return doc.title + " " + doc.body
+    }
+}
+
+export function extractOwnerAndRepo(url) {
+    const regex = /repos\/([^\/]+)\/([^\/]+)/;
+    const match = url.match(regex);
+    
+    if (match && match.length === 3) {
+        const owner = match[1];
+        const repo = match[2];
+        return { owner, repo };
+    } else {
+        return null;
     }
 }

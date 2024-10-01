@@ -23,7 +23,7 @@ export async function startSearchTool(startDate, keywords){
     const currentDate = getCurrentDate();
 
     keywords.forEach(async word => {
-        //await searchKeyword(word, startDate, currentDate, constants.API_BASEURL_SEARCH_COMMITS);
+        await searchKeyword(word, startDate, currentDate, constants.API_BASEURL_SEARCH_COMMITS);
         await searchKeyword(word, startDate, currentDate, constants.API_BASEURL_SEARCH_PULLREQUESTS_ISSUES);
     });
 }
@@ -68,12 +68,12 @@ async function searchKeyword(keyword, startDate, finishDate, searchType){
             response = await getSinglePageDataSearch(searchType, searchApiParamsIssues(keyword, nextDate));
         }
         
-        /*
-        response.result.data.items.forEach(item => {
+        //console.log(response);
+        /*response.result.data.items.forEach(item => {
             console.log(item);
             console.log("----------------------------------------")
-        })*/
-
+        })
+        console.log("last item: ----------------------------------------")*/
         if(response.nextDate !== -1){
             nextDate = formatDate(response.nextDate);
         }
@@ -89,6 +89,8 @@ async function searchKeyword(keyword, startDate, finishDate, searchType){
             writeToCollection(collectionNameParser(searchType), response.result.data.items)
         }
 
+        console.log("--------------------------------------------")
+        console.log(response.result.url);
         console.log(nextDate + " " + response.result.data.items.length);
     } while (response.nextDate !== -1);
 
