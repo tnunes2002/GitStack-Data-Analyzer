@@ -79,6 +79,20 @@ export async function getRepoPullRequests(owner, repoName){
     }
 }
 
+export async function getCommitBySha(owner, repo, sha){
+    try{
+        const response = await octokit.request('GET /repos/{owner}/{repo}/commits/{ref}', {
+            owner: owner,
+            repo: repo,
+            ref: sha
+          })
+
+        return response;
+    }catch(err){
+        console.error(err);
+    }
+}
+
 export async function searchCommitsWithKeyword(owner, repo, keyword) {
     try {
       const query = `${keyword}`;

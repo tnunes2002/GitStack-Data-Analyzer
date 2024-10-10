@@ -61,7 +61,7 @@ export async function joinWordsWithDatabase(words, collectionNames){
 export async function joinDatabaseWithRepos(collectionName){
     const cursor = await getCollection(collectionName);
     let cont = 0;
-    let trashold = 42000
+    let trashold =14500;
     for await (const doc of cursor){
         if(cont<trashold){
             cont++;
@@ -92,6 +92,7 @@ export async function joinDatabaseWithRepos(collectionName){
             console.log("----------------------------------")
             console.log("scritto");
             //console.log(doc.repository.html_url);
+            doc.numStars = numStars;
             writeToCollection(constants.MONGODB_NGRAM_ELEMENTS_PARSED, [doc]);
         }
 

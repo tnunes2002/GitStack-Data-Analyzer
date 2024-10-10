@@ -67,5 +67,29 @@ export const searchRepoApiParams = (owner, repoName) => {
     return {
         owner: owner,
         repo: repoName,
+        per_page: 100
+    }
+}
+
+export const searchCommitBySha = (owner, repoName, sha) => {
+    return {
+        owner: owner,
+        repo: repoName,
+        ref: sha
+    }
+}
+export const searchIssueByRepo = (owner, repoName, commitNumber) => {
+    return {
+        owner: owner,
+        repo: repoName,
+        commitNumber: commitNumber
+    }
+}
+
+export const searchPullRequestByRepo = (owner, repoName, pullNumber) => {
+    return {
+        owner: owner,
+        repo: repoName,
+        pullNumber: pullNumber
     }
 }
